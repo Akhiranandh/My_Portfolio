@@ -1,0 +1,581 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Akhiranandh — Software Developer and Technology Enthusiast.">
+    <meta name="theme-color" content="#090a13">
+
+    <title>Akhiranandh | Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- PAGE LOADER -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-logo">AK<span>.</span></div>
+        <div class="loader-line"><span></span></div>
+        <p>WELCOME TO MY WORLD</p>
+    </div>
+
+    <div class="ambient-background"></div>
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- NAVBAR -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                akhiranandh<span>.</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle"
+                    aria-label="Toggle navigation"
+                    aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" id="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <div class="nav-socials">
+                <!-- Replace these with your actual profile URLs -->
+                <a href="https://github.com/" target="_blank"
+                   rel="noopener noreferrer" aria-label="GitHub">GH</a>
+                <a href="https://linkedin.com/" target="_blank"
+                   rel="noopener noreferrer" aria-label="LinkedIn">IN</a>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-grid"></div>
+            <div class="hero-glow"></div>
+
+            <!-- INTRODUCTION -->
+            <div class="hero-content">
+
+                <div class="hero-tag">
+                    <span class="tag-line"></span>
+                    WELCOME TO MY WORLD
+                </div>
+
+                <h1 class="hero-title">
+                    Hello, I'm
+                    <span class="hero-name">Akhiranandh.</span>
+                </h1>
+
+                <p class="hero-role">
+                    Software Developer
+                    <span>|</span>
+                    Python Enthusiast
+                    <span>|</span>
+                    Technology Explorer
+                </p>
+
+                <p class="hero-description">
+                    I enjoy building software solutions, exploring
+                    emerging technologies and turning ideas into
+                    meaningful products.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#projects" class="primary-button">
+                        Explore My Work
+                        <span class="button-arrow">→</span>
+                    </a>
+
+                    <a href="#contact" class="secondary-button">
+                        Get In Touch
+                        <span class="button-arrow">↗</span>
+                    </a>
+
+                </div>
+
+                <div class="hero-stats">
+
+                    <div class="stat-item">
+                        <h3>6+</h3>
+                        <p>Projects</p>
+                    </div>
+
+                    <div class="stat-item">
+                        <h3>6</h3>
+                        <p>Months Experience</p>
+                    </div>
+
+                    <div class="stat-item">
+                        <h3>4+</h3>
+                        <p>Competitions</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PORTRAIT -->
+            <div class="hero-visual" id="hero-visual">
+
+                <div class="portrait-aura"></div>
+
+                <div class="hud-ring ring-one"></div>
+                <div class="hud-ring ring-two"></div>
+
+                <div class="portrait-image-wrap">
+                    <img
+                        src="{% static 'core/images/portrait.png' %}"
+                        class="hero-portrait"
+                        alt="Akhiranandh"
+                        fetchpriority="high"
+                    >
+                </div>
+
+                <!-- Minimal floating labels -->
+                <div class="tech-label label-one">
+                    <span class="tech-icon">&lt;/&gt;</span>
+                    <span>Software Development</span>
+                </div>
+
+                <div class="tech-label label-two">
+                    <span class="tech-icon">◈</span>
+                    <span>AI & Emerging Technology</span>
+                </div>
+
+                <div class="portrait-caption">
+                    <span class="caption-dot"></span>
+                    BUILDING WHAT'S NEXT
+                </div>
+
+            </div>
+
+
+            <a href="#about" class="scroll-indicator">
+                <span class="scroll-mouse"><span></span></span>
+                <span>SCROLL TO EXPLORE</span>
+            </a>
+
+        </section>
+
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+
+            <div class="section-heading reveal">
+                <span class="section-kicker">GET TO KNOW ME</span>
+                <h2>About <span>Me</span></h2>
+                <p>A little about my background, interests and journey.</p>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-main glass-card reveal">
+                    <span class="card-index">01 / INTRODUCTION</span>
+
+                    <h3>Curiosity drives creation.</h3>
+
+                    <p>
+                        I'm Akhiranandh, an Electronics and Communication
+                        Engineering graduate with a strong interest in
+                        software development and emerging technologies.
+                    </p>
+
+                    <p>
+                        My journey has introduced me to programming,
+                        web development, embedded systems, IoT and
+                        data-driven problem solving.
+                    </p>
+
+                    <p>
+                        I enjoy learning through practical projects
+                        and transforming ideas into useful solutions.
+                    </p>
+                </div>
+
+                <div class="about-side glass-card reveal">
+                    <span class="card-index">02 / MY APPROACH</span>
+
+                    <div class="about-symbol">&lt;/&gt;</div>
+
+                    <h3>Learn. Build. Improve.</h3>
+
+                    <p>
+                        I believe the best way to understand technology
+                        is to experiment, create and keep improving.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+
+            <div class="section-heading reveal">
+                <span class="section-kicker">SELECTED WORK</span>
+                <h2>Things I've <span>Built</span></h2>
+                <p>Engineering ideas and software projects.</p>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span>PROJECT 01</span>
+                        <span>01</span>
+                    </div>
+
+                    <div class="project-art art-one">NV.</div>
+
+                    <h3>NeoVitals — Smart Infant Sock</h3>
+
+                    <p>
+                        An IoT-based infant wellness monitoring concept
+                        integrating sensors and edge machine learning
+                        for monitoring wellness parameters.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>IoT</span>
+                        <span>Edge ML</span>
+                        <span>Embedded Systems</span>
+                    </div>
+                </article>
+
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span>PROJECT 02</span>
+                        <span>02</span>
+                    </div>
+
+                    <div class="project-art art-two">SP.</div>
+
+                    <h3>StockPilot — Inventory Management</h3>
+
+                    <p>
+                        A Django-based inventory management application
+                        for organising product records and managing
+                        inventory information.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Django</span>
+                        <span>SQLite</span>
+                    </div>
+                </article>
+
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span>PROJECT 03</span>
+                        <span>03</span>
+                    </div>
+
+                    <div class="project-art art-three">Fe.</div>
+
+                    <h3>FeFET Based Biosensor</h3>
+
+                    <p>
+                        An engineering project exploring ferroelectric
+                        field-effect transistor technology and its
+                        potential biosensing applications.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Electronics</span>
+                        <span>FeFET</span>
+                        <span>Biosensors</span>
+                    </div>
+                </article>
+
+
+                <article class="project-card reveal">
+                    <div class="project-top">
+                        <span>PROJECT 04</span>
+                        <span>04</span>
+                    </div>
+
+                    <div class="project-art art-four">AR.</div>
+
+                    <h3>Autonomous Cleaning Robot</h3>
+
+                    <p>
+                        An engineering project focused on an
+                        autonomous cleaning system using sensors,
+                        electronics and robotics concepts.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Robotics</span>
+                        <span>Automation</span>
+                        <span>Electronics</span>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+
+            <div class="section-heading reveal">
+                <span class="section-kicker">PROFESSIONAL JOURNEY</span>
+                <h2>Work <span>Experience</span></h2>
+            </div>
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-card glass-card">
+
+                        <span class="timeline-date">
+                            6 MONTHS · INDUSTRIAL TRAINING
+                        </span>
+
+                        <h3>Industrial Trainee — Supply Chain Management</h3>
+
+                        <h4>Safran Electrical & Power</h4>
+
+                        <p>
+                            Gained industry exposure in supply chain
+                            operations and coordination activities.
+                        </p>
+
+                        <ul>
+                            <li>Dispatch coordination and shipment handling.</li>
+                            <li>Work-in-progress tracking.</li>
+                            <li>Exposure to SAP MM operations.</li>
+                            <li>Excel-based operational tracking and reporting.</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- EDUCATION -->
+        <section class="section" id="education">
+
+            <div class="section-heading reveal">
+                <span class="section-kicker">ACADEMIC BACKGROUND</span>
+                <h2>My <span>Education</span></h2>
+            </div>
+
+            <div class="education-card glass-card reveal">
+
+                <div class="education-year">2022 — 2026</div>
+
+                <div>
+                    <h3>Bachelor of Technology</h3>
+
+                    <h4>Electronics and Communication Engineering</h4>
+
+                    <p>
+                        Mahindra University —
+                        École Centrale School of Engineering
+                    </p>
+
+                    <span class="education-status">
+                        GRADUATED · 2026
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ACHIEVEMENTS -->
+        <section class="section" id="achievements">
+
+            <div class="section-heading reveal">
+                <span class="section-kicker">MILESTONES</span>
+                <h2>Achievements & <span>Activities</span></h2>
+            </div>
+
+            <div class="achievements-grid">
+
+                <div class="achievement-card glass-card reveal">
+                    <span>01 / IDEATION</span>
+                    <h3>Silicon Labs Ideathon</h3>
+                    <p>Technical ideation and innovation activity.</p>
+                </div>
+
+                <div class="achievement-card glass-card reveal">
+                    <span>02 / INNOVATION</span>
+                    <h3>IET Innothon</h3>
+                    <p>Technical innovation and problem-solving competition.</p>
+                </div>
+
+                <div class="achievement-card glass-card reveal">
+                    <span>03 / COMPETITION</span>
+                    <h3>AtomQuest 2025</h3>
+                    <p>Engineering-focused competition participation.</p>
+                </div>
+
+                <div class="achievement-card glass-card reveal">
+                    <span>04 / ENTREPRENEURSHIP</span>
+                    <h3>Mahindra Incubation Hub</h3>
+                    <p>Innovation and entrepreneurial project activities.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- SKILLS -->
+        <section class="section" id="skills">
+
+            <div class="section-heading reveal">
+                <span class="section-kicker">MY TOOLKIT</span>
+                <h2>Skills & <span>Technologies</span></h2>
+                <p>Technologies I've worked with or am currently learning.</p>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card glass-card reveal">
+                    <span class="skill-symbol">&lt;/&gt;</span>
+                    <h3>Programming</h3>
+                    <p>Python · C · Java · JavaScript</p>
+                </div>
+
+                <div class="skill-card glass-card reveal">
+                    <span class="skill-symbol">⌘</span>
+                    <h3>Web Development</h3>
+                    <p>Django · Flask · HTML · CSS</p>
+                </div>
+
+                <div class="skill-card glass-card reveal">
+                    <span class="skill-symbol">▤</span>
+                    <h3>Databases</h3>
+                    <p>MySQL · SQLite · SQL · JSON</p>
+                </div>
+
+                <div class="skill-card glass-card reveal">
+                    <span class="skill-symbol">◈</span>
+                    <h3>Tools</h3>
+                    <p>Git · GitHub · VS Code · Postman</p>
+                </div>
+
+                <div class="skill-card glass-card reveal">
+                    <span class="skill-symbol">▥</span>
+                    <h3>Data & Analytics</h3>
+                    <p>Excel · Power BI · Tableau</p>
+                </div>
+
+                <div class="skill-card glass-card reveal">
+                    <span class="skill-symbol">◎</span>
+                    <h3>Emerging Technologies</h3>
+                    <p>IoT · Embedded Systems · AI · ML</p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- CONTACT -->
+        <section class="section" id="contact">
+
+            <div class="section-heading reveal">
+                <span class="section-kicker">LET'S CONNECT</span>
+                <h2>Have an idea? <span>Let's talk.</span></h2>
+                <p>I'm always open to meaningful conversations and opportunities.</p>
+            </div>
+
+            <div class="contact-container">
+
+                <div class="contact-info glass-card reveal">
+                    <span class="card-index">GET IN TOUCH</span>
+
+                    <h3>Let's build something meaningful.</h3>
+
+                    <p>
+                        Interested in software development,
+                        technology, engineering or collaboration?
+                        Send me a message.
+                    </p>
+
+                    <div class="contact-accent">AK<span>.</span></div>
+                </div>
+
+
+                <div class="contact-form-container glass-card reveal">
+
+                    {% if success %}
+                        <div class="success-message">
+                            Thank you! Your message has been sent successfully.
+                        </div>
+                    {% endif %}
+
+                    <form method="POST" class="contact-form">
+                        {% csrf_token %}
+
+                        {{ form.as_p }}
+
+                        <button type="submit" class="primary-button">
+                            Send Message <span>→</span>
+                        </button>
+                    </form>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <a href="#home" class="logo">
+            akhiranandh<span>.</span>
+        </a>
+
+        <p>Building ideas into meaningful solutions.</p>
+
+        <p class="copyright">
+            © 2026 Akhiranandh. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="{% static 'core/js/script.js' %}" defer></script>
+
+</body>
+</html>
